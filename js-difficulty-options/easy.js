@@ -9,56 +9,47 @@ const menu = {
 
 // Function to display menu items by category
 function displayMenuItems(menu) {
-  // Get the menu container element from the HTML
-  const menuElement = document.getElementById("menu");
-  // Loop through each category and its items in the menu object
-  for (const [category, items] of Object.entries(menu)) {
-    // Create an element to represent the category
-    const courseElement = document.createElement("div");
-    // Set the text content of the category element to the category name
-    courseElement.textContent = category;
-    // Append the category element to the menu container
-    menuElement.appendChild(courseElement);
-    // Create an element to represent a list of items
-    const listElement = document.createElement("ul");
-    // Append a list of items element to the menu container
-    menuElement.appendChild(listElement);
-    // Loop through the items in the category and create list items
-    items.forEach((item) => {
-      // Create a list item element
-      const listItem = document.createElement("li");
-      // Set the text content of the list item element to the item name
-      listItem.textContent = item;
-      // Attach a click event listener to the list item to add it to the order
+  // QUESTION: What do you need to get from the HTML to display the menu? Find a way to reference it.
 
-      listItem.addEventListener("click", () => addToOrder(item));
-      // Append the list item to the list of items
-      listElement.appendChild(listItem);
+  // QUESTION: How can you loop through each category and its items in the menu object?
+
+  for (const [category, items] of Object.entries(menu)) {
+    // QUESTION: What HTML element represents a category? Create it here.
+
+    // QUESTION: How can you set the text content of the category element to the category name?
+
+    // QUESTION: How can you append the category element to the menu container in the HTML?
+
+    // QUESTION: What HTML element represents a list of items? Create it here.
+
+    // QUESTION: Loop through the items in the category and create list items for each one.
+
+    items.forEach((item) => {
+      // QUESTION: Create a list item element here.
+      // QUESTION: How can you set the text content of the list item element to the item name?
+      // QUESTION: Attach a click event listener to the list item to add it to the order.
+      // QUESTION: How can you append the list item to the list of items for this category?
     });
   }
 }
 
+// QUESTION: How can you update the order when an item is added? What elements in the HTML do you need to reference?
+
 // Callback function for adding an item to the order
 function addToOrder(itemName) {
-  // Get the order items list and the order total element from the HTML
-  const orderListElement = document.getElementById("order-items");
-  const orderTotalElement = document.getElementById("order-total");
-  // Create a list item for the order
-  const listItem = document.createElement("li");
-  // Set the text content of the list item to the item name
-  listItem.textContent = itemName;
-  // Append the list item to the order items list
-  orderListElement.appendChild(listItem);
-  // Calculate and update the total price
-  let total = parseFloat(orderTotalElement.textContent);
-  total += 60;
-  // Update the text content of the order total element with the new total
-  orderTotalElement.textContent = total.toFixed(2);
+  // QUESTION: What HTML elements represent the order items list and the order total?
+  // QUESTION: Create a list item for the order here.
+  // QUESTION: How can you set the text content of the list item to the item name?
+  // QUESTION: How can you append the list item to the order items list?
+  // QUESTION: Calculate and update the total price. How can you access the current total and item price?
+  // QUESTION: How can you update the text content of the order total element with the new total?
 }
+
+// QUESTION: What's the first step to initialize the menu system and display the menu?
 
 // Function to initialize the menu system
 function initMenuSystem(menu) {
-  displayMenuItems(menu);
+  // QUESTION: What function should you call to display the menu?
 }
 
 // QUESTION: How can you start the menu system? What function should you call here?
